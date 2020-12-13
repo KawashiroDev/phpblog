@@ -1,0 +1,83 @@
+
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<!--Nani? we back in 1999 now?-->
+<!--how2webdesign?-->
+<title>debug</title>
+<script>
+      var openFile = function(event) {
+        var input = event.target;
+
+        var reader = new FileReader();
+        reader.onload = function(){
+          var text = reader.result;
+          var node = document.getElementById('output');
+          node.innerText = text;
+          console.log(reader.result.substring(0, 200));
+        };
+        reader.readAsText(input.files[0]);
+      };
+	  
+</script>	  
+</head>
+
+<!--Fancy ASCII art-->
+<body>
+
+
+        <pre>
+		
+        </pre>
+		
+<div align="center"><center>
+
+<h1><strong><font face="Arial">debugging</font></strong></h1>
+</center></div>
+
+<hr>
+
+<div align="center"><center>
+<h2>Database backend</h2>
+<p></p>
+<a href="debug/dropconfirm.html">list all records</a>
+<br>
+<a href="debug/dropconfirm.html">Drop everything</a>
+
+
+
+<!--Fancylinebreak-->
+<hr>
+
+<h2>Website</h2>
+<a href="debug/login.php">Login page</a>
+<br>
+<a href="debug/file.php">file manager</a>
+
+<hr>
+
+
+<h2>Tests</h2>
+<a href="debug/phpinfo.php">PHP information page</a>
+<br>
+<a href="debug/osinfo.php">Server OS info</a>
+
+<hr>
+
+<h2>Abnormal behavior</h2>
+<a href="debug/something_non_existent">Check 404 page</a>
+
+<hr>
+
+<h2>Script</h2>
+<input type='file' accept='text/plain' onchange='openFile(event)'><br>
+<div id='output'>
+</div>
+ 
+ 
+
+
+</center></div>
+
+<a href="index.html">back</a>
+
+</body></html>
